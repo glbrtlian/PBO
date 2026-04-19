@@ -23,12 +23,14 @@ public class MenuApp {
             int pilih = Integer.parseInt(sc.nextLine());
 
             switch (pilih) {
-                case 1: menuMobil(); break;
-                case 2: menuMotor(); break;
-                case 3: menuSepeda(); break;
-                case 4: tampilSemua(); break;
-                case 0: return;
-                default: System.out.println("Pilihan salah");
+                case 1 -> menuMobil();
+                case 2 -> menuMotor();
+                case 3 -> menuSepeda();
+                case 4 -> tampilSemua();
+                case 0 -> {
+                    return;
+                }
+                default -> System.out.println("Pilihan salah");
             }
         }
     }
@@ -47,7 +49,7 @@ public class MenuApp {
             int p = Integer.parseInt(sc.nextLine());
 
             switch (p) {
-                case 1:
+                case 1 -> {
                     System.out.print("Merk: ");
                     String merk = sc.nextLine();
                     System.out.print("Plat: ");
@@ -60,9 +62,9 @@ public class MenuApp {
                     Mobil m = new Mobil(merk, plat, ban, warna);
                     mobils.add(m);
                     m.tambahData(); // interface
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     if (mobils.isEmpty()) System.out.println("Kosong");
                     else {
                         for (int i = 0; i < mobils.size(); i++) {
@@ -70,9 +72,9 @@ public class MenuApp {
                             mobils.get(i).info();
                         }
                     }
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.print("Index: ");
                     int i = Integer.parseInt(sc.nextLine()) - 1;
                     if (i >= 0 && i < mobils.size()) {
@@ -83,18 +85,20 @@ public class MenuApp {
                         mm.setPlatNomor(sc.nextLine());
                         System.out.println("Berhasil update");
                     }
-                    break;
+                }
 
-                case 4:
+                case 4 -> {
                     System.out.print("Index: ");
                     int h = Integer.parseInt(sc.nextLine()) - 1;
                     if (h >= 0 && h < mobils.size()) {
                         mobils.get(h).hapusData();
                         mobils.remove(h);
                     }
-                    break;
+                }
 
-                case 0: return;
+                case 0 -> {
+                    return;
+                }
             }
         }
     }
@@ -112,7 +116,7 @@ public class MenuApp {
             int p = Integer.parseInt(sc.nextLine());
 
             switch (p) {
-                case 1:
+                case 1 -> {
                     System.out.print("Merk: ");
                     String merk = sc.nextLine();
                     System.out.print("Plat: ");
@@ -123,25 +127,27 @@ public class MenuApp {
                     Motor m = new Motor(merk, plat, pemilik);
                     motors.add(m);
                     m.tambahData();
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     for (int i = 0; i < motors.size(); i++) {
                         System.out.print((i+1) + ". ");
                         motors.get(i).info();
                     }
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.print("Index: ");
                     int h = Integer.parseInt(sc.nextLine()) - 1;
                     if (h >= 0 && h < motors.size()) {
                         motors.get(h).hapusData();
                         motors.remove(h);
                     }
-                    break;
+                }
 
-                case 0: return;
+                case 0 -> {
+                    return;
+                }
             }
         }
     }
@@ -159,7 +165,7 @@ public class MenuApp {
             int p = Integer.parseInt(sc.nextLine());
 
             switch (p) {
-                case 1:
+                case 1 -> {
                     System.out.print("Merk: ");
                     String merk = sc.nextLine();
                     System.out.print("Plat: ");
@@ -170,25 +176,27 @@ public class MenuApp {
                     Sepeda s = new Sepeda(merk, plat, jenis);
                     sepedas.add(s);
                     s.tambahData();
-                    break;
+                }
 
-                case 2:
+                case 2 -> {
                     for (int i = 0; i < sepedas.size(); i++) {
                         System.out.print((i+1) + ". ");
                         sepedas.get(i).info();
                     }
-                    break;
+                }
 
-                case 3:
+                case 3 -> {
                     System.out.print("Index: ");
                     int h = Integer.parseInt(sc.nextLine()) - 1;
                     if (h >= 0 && h < sepedas.size()) {
                         sepedas.get(h).hapusData();
                         sepedas.remove(h);
                     }
-                    break;
+                }
 
-                case 0: return;
+                case 0 -> {
+                    return;
+                }
             }
         }
     }

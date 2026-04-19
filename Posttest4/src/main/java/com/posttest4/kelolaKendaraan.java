@@ -1,6 +1,6 @@
 package com.posttest4;
 
-public interface KelolaKendaraan {
+public interface kelolaKendaraan {
     void tambahData();
     void hapusData();
 }

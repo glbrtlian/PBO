@@ -1,6 +1,6 @@
 package com.posttest4;
 
-public class Motor extends Kendaraan implements KelolaKendaraan {
+public class Motor extends Kendaraan implements kelolaKendaraan {
     private String namaPemilik;
 
     public Motor(String merk, String platNomor, String namaPemilik) {

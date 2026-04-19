@@ -1,6 +1,6 @@
 package com.posttest4;
 
-public class Sepeda extends Kendaraan implements KelolaKendaraan {
+public class Sepeda extends Kendaraan implements kelolaKendaraan {
     private String jenisSepeda;
 
     public Sepeda(String merk, String platNomor, String jenisSepeda) {

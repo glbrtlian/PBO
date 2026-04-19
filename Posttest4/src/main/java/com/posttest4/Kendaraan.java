@@ -27,4 +27,9 @@ public abstract class Kendaraan {
         System.out.println("Merk: " + merk);
         System.out.println("Plat Nomor: " + platNomor);
     }
+
+    public void tambahData() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'tambahData'");
+    }
 }
